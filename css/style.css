@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+}
+
+::selection{
+    background-color: var(--Grayish-Blue);
+    color: #fff;
+}
+
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--Soft-Red);
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.header .logo img {
+    height: 40px; /* Automatically forces the logo height to be compact and small */
+    width: auto;  /* Maintains the original aspect ratio automatically */
+}
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--Grayish-Blue);
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+
+.heading h1{
+    padding-bottom: 2rem;
+}
+
+
+.heading p{
+    max-width: 60rem;
+    margin: auto;
+    color: var(--Grayish-Blue);
+    font-size: 1.7rem;
+}
+
+
+.all-btn{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: var(--Grayish-Blue);
+    border-radius: .3rem;
+    color: #fff;
+}
+
+.all-btn:hover{
+    background-color: transparent;
+    color: var(--Grayish-Blue);
+    border: 2px solid var(--Grayish-Blue);
+}
+
+.download .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.download .box-container .box {
+    width: 100%;
+}
+
+:root{
+    --Soft-Blue: hsl(231, 69%, 60%);
+    --Soft-Red: hsl(0, 94%, 66%);
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+    --box-shadow: .5rem .5rem  0 hsl(231, 69%, 60%);
+    --text-shadow: .4rem .4rem  0 rgba(0, 0, 0, .2);
+    --border: .2rem  solid var(--Red);
+}
+
+
+/* navbar sections starts */
+.header{
+    padding: 3rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    z-index: 10000;
+    background-color: #fff;
+    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+
+.header .logo{
+    cursor: pointer;
+}
+
+
+.header .navbar a{
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+
+.header .navbar a:hover{
+    color: var(--Grayish-Blue);
+}
+
+
+.header .navbar .btn{
+    padding: .6rem 3rem;
+    background-color: var(--Soft-Red);
+    color: #fff;
+    border-radius: .5rem;
+}
+
+.header .navbar .btn:hover{
+    color: var(--Soft-Red);
+    background-color: transparent;
+    border: 2px solid var(--Soft-Red);
+}
+
+#menu-btn{
+    padding: 1rem 1rem;
+    background-color: #eee;
+    font-size: 3rem;
+    color: var(--Soft-Red);
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* Media Queries */
+
+
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    
+}
+
+@media (max-width: 768px){
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        box-shadow: var(--box-shadow);
+        width: 33rem;
+        border-radius: .5rem;
+        border: 2px solid var(--Grayish-Blue);
+        background-color: #fff;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .navbar.active{
+        transform: scale(1);
+    }
+
+    .header .navbar a{
+        margin: 2.5rem;
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+/* navbar sections ends */
+
+
+/* home section starts  */
+
+.home{
+    padding-top: 15rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* main property for responsiveness */
+    gap: 1.5rem;
+}
+
+
+.home .image{
+    flex: 1 1 78rem;
+}
+
+
+.home .image img {
+    width: 100%;
+    max-width: 800px; /* Increase this value (e.g., 700px or 800px) to make the illustration larger */
+    height: auto;
+}
+
+.home .content{
+    flex: 1 1 45rem;
+}
+
+
+.home .content h1{
+    font-size: 4.5rem;
+    padding-block-end: 1rem 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: var(--Grayish-Blue);
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn{
+    padding: 1.3rem 2rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.4rem;
+    box-shadow: .5rem .5rem hsl(231, 69%, 60%);
+    border: 2px solid var(--Grayish-Blue);
+    border-radius: .5rem;
+}
+
+/* Force all general buttons and 'more info' buttons to be white with a red outline */
+.all-btn, .home-btn, .btn {
+    background-color: #ffffff !important;
+    color: #e74c3c !important;
+    border: 2px solid #e74c3c !important;
+    box-shadow: 0.5rem 0.5rem 0 rgba(231, 76, 60, 0.2) !important;
+}
+
+/* Hover style to fill them with red when hovered */
+.all-btn:hover, .home-btn:hover, .btn:hover {
+    background-color: #e74c3c !important;
+    color: #ffffff !important;
+}
+/* Make service box inquire buttons white with a red border */
+.download .box .all-btn {
+    background-color: #ffffff !important;
+    color: #e74c3c !important;
+    border: 2px solid #e74c3c !important;
+    box-shadow: 0.5rem 0.5rem 0 rgba(231, 76, 60, 0.2) !important;
+}
+
+/* Inquire button hover effect */
+.download .box .all-btn:hover {
+    background-color: #e74c3c !important;
+    color: #ffffff !important;
+}/* Change the service box wrapper border and background shadow block to black */
+.download .box {
+    border: 2px solid black !important;
+    position: relative;
+}
+
+/* If the card uses a pseudo-element or shadow block for that background offset layer */
+.download .box::before,
+.download .box::after {
+    background-color: black !important;
+}
+
+/* Alternative selector if your template uses box-shadow for the card offset */
+.download .box {
+    box-shadow: 0.5rem 0.5rem 0 #34495e !important;
+}
+
+
+
+/* home section ends */
+
+
+
+/* features section starts  */
+
+.features .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+
+.features .row .image{
+    flex: 1 1 45rem;
+}
+
+
+.features .row .image img{
+    width: 100%;
+}
+
+
+
+.features .row .content{
+    flex: 1 1 45rem;
+}
+
+
+.features .row .content h1{
+    font-size: 4rem;
+    padding: 1rem 0;
+    color: var(--Grayish-Blue);
+}
+
+
+.features .row .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: var(--Grayish-Blue);
+    padding-bottom: 4rem;
+}
+/* features section ends */
+
+
+/* downloads section starts  */
+
+.download .box-container{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.download .box{
+    border: 2px solid var(--Grayish-Blue);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+.download .box:hover{
+    border: 2px solid var(--Grayish-Blue);
+    box-shadow: none;
+}
+
+
+.download .box h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--Grayish-Blue);
+}
+
+
+
+.download .box p{
+    font-size: 1.7rem;
+    padding-bottom: 2.5rem;
+    color: var(--Red);
+}
+
+/* downloads section ends */
+
+
+
+/* footer section starts */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--Grayish-Blue);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--Grayish-Blue);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--Soft-Red);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:1rem;
+}
+
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+
+.footer .credit span{
+    color: var(--Soft-Red);
+    cursor: pointer;
+}
+
+
+/* footer section ends */
